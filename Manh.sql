@@ -27,8 +27,8 @@ select fullname,EtIq, EtMath, EtEnglish from TRAINEE group by fullname, EtIq, Et
 having EtIq + EtMath >=20 and EtIq >= 8 and EtMath >= 8 and EtEnglish >= 18 
 
 
-select traineeId,birthday from TRAINEE
-where EtIq + EtMath >=20 and EtIq >= 8 and EtMath >= 8 and EtEnglish >= 18 group by birthday, traineeId
+select COUNT(traineeId),birthday from TRAINEE
+where EtIq + EtMath >=20 and EtIq >= 8 and EtMath >= 8 and EtEnglish >= 18 group by birthday
 
 select  len(fullname)   
  from TRAINEE
